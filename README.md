@@ -1,4 +1,12 @@
-
+# Build guide
+Build the toolchain and simulator using:
+```
+docker build . -f Dockerfile.builder -t federicorossir/riscv-rvv
+```
+Then build the release image (10GB less of space occupation) using:
+```
+docker build . -f Dockerfile.release -t federicorossir/riscv-rvv-release
+```
 # Usage guide
 Docker images can be obtained through:
 ```bash
