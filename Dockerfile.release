@@ -1,0 +1,6 @@
+FROM federicorossir/riscv-rvv AS builder
+FROM debian:latest
+WORKDIR /opt/riscv
+COPY --from=builder /opt/riscv/ ./
+ENV PATH="/opt/riscv/bin:${PATH}"
+ENV RISCV="/opt/riscv"
