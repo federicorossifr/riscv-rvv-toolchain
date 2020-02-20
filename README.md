@@ -1,5 +1,20 @@
+
+# Usage guide
+Docker images can be obtained through:
+```bash
+docker pull federicorossir/riscv-rvv-toolchain
+```
+
+## Inside-container builds
+Run the container as follow to map a project folder from your host inside the container:
+
+```bash
+docker run -it -v /path/to/your/project:/home/project federicorossir/riscv-rvv-release bash
+```
 Binaries are located in /opt/riscv/bin (this is included in the PATH env variable).
 
+
+## Local builds (binary binding)
 Use the following script to bind the binaries in your host machine (you may need to create the folder where you want to mount the files):
 
 ```bash
