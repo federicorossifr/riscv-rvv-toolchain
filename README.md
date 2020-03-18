@@ -28,7 +28,7 @@ Use the following script to bind the binaries in your host machine (you may need
 ```bash
 #!/bin/bash
 idd=$(id -u)
-docker run -v /opt/riscv:/home/project -it federicorossir/riscv-rvv-release sh -c "cp -r /opt/riscv/* /home/project; chown -R $idd:$idd /home/project;"
+docker run -v /opt/riscv:/home/project -it federicorossir/riscv-rvv-toolchain sh -c "cp -r /opt/riscv/* /home/project; chown -R $idd:$idd /home/project;"
 export PATH="/opt/riscv/bin:$PATH"
 ```
 
